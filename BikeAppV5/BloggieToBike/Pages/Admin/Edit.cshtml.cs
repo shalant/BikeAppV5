@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +20,7 @@ namespace BloggieToBike.Pages.NewBikeRoutes
 
         [BindProperty]
         public NewBikeRoute NewBikeRoute { get; set; } = default!;
+        public bool IsChecked { get; set; } = true;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -38,6 +35,14 @@ namespace BloggieToBike.Pages.NewBikeRoutes
                 return NotFound();
             }
             NewBikeRoute = newbikeroute;
+            if(newbikeroute.Featured)
+            {
+                IsChecked = true;
+            }
+            else
+            {
+                IsChecked = false;
+            }
             return Page();
         }
 

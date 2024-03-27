@@ -28,7 +28,8 @@ namespace BloggieToBike.Pages.NewBikeRoutes
 
         [BindProperty]
         public NewBikeRoute NewBikeRoute { get; set; } = default!;
-        
+        public bool IsChecked { get; set; } = true;
+
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
@@ -37,7 +38,14 @@ namespace BloggieToBike.Pages.NewBikeRoutes
             {
                 return Page();
             }
-
+            if(IsChecked)
+            {
+                NewBikeRoute.Featured = true;
+            }
+            else
+            {
+                NewBikeRoute.Featured = false;
+            }
             _context.NewBikeRoute.Add(NewBikeRoute);
             await _context.SaveChangesAsync();
 

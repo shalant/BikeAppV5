@@ -1,5 +1,6 @@
 ﻿@page
 @model BloggieToBike.Pages.NewBikeRoutes.EditModel
+@using BloggieToBike.Models
 @using Microsoft.AspNetCore.Identity
 @inject SignInManager<IdentityUser> signInManager
 
@@ -7,9 +8,7 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
-
-<h4>Edit Bike Route</h4>
+<h3>Edit Bike Route:</h3>
 <hr />
 @if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
 {
@@ -80,12 +79,12 @@
                     <span asp-validation-for="NewBikeRoute.Author" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label type="checkbox" asp-for="NewBikeRoute.Featured" class="control-label"></label>
-                    <input type="checkbox" asp-for="NewBikeRoute.Featured" class="form-control" />
+                    <label asp-for="NewBikeRoute.Featured" class="control-label"></label>
+                    <input type="checkbox" id="IsChecked" asp-for="IsChecked" class="form-check-input" />
                     <span asp-validation-for="NewBikeRoute.Featured" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Save" class="btn btn-primary" />
+                    <input type="submit" value="Save" class="btn btn-primary mt-2" />
                 </div>
             </form>
         </div>
