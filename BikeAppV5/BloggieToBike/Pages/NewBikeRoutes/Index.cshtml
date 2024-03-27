@@ -12,11 +12,10 @@
 
 <div class="container">
     <br />
-    <h1>List View</h1>
     <div>
         @if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
         {
-            <a asp-page="/Admin/Create">Create New</a>
+            <a class="btn btn-primary float-end" asp-page="/Admin/Create">Create New</a>
             <h1>Admin Panel</h1>
         }
     </div>
@@ -67,10 +66,6 @@
         </tbody>
     </table>
     </div>
-    <div>
-        CSS sandbox
-    </div>
-
 
     <div class="container list-container">
         <div class="row align-items-start">
