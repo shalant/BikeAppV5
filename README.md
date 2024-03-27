@@ -7,6 +7,10 @@ Clone the repository and open with Visual Studio 2022
 ## Latest Version
 This is updated from BikeApp V4 in late March 2024.
 
+<div style="width:60px ; height:60px">
+![Bike App Screenshot](/BikeAppV5/BloggieToBike/wwwroot/images/BikeAppSS.png?raw=true "Bike App V5 Screenshot")
+<div>
+
 ## Todo
 I hope to deploy this on Azure and continue refining the UI
 
