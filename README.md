@@ -8,7 +8,7 @@ Clone the repository and open with Visual Studio 2022
 This is updated from BikeApp V4 in late March 2024.
 
 <div style="width:60px ; height:60px">
-![Bike App Screenshot](/BikeAppV5/BloggieToBike/wwwroot/images/BikeAppSS.png?raw=true "Bike App V5 Screenshot")
+<img src="/BikeAppV5/BloggieToBike/wwwroot/images/BikeAppSS.png" alt="Bike App V5 Screenshot">
 <div>
 
 ## Todo
